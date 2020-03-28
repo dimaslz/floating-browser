@@ -1,0 +1,19 @@
+{
+  "name": "Floating-Browser",
+  "description" : "A always-on-top browser window for any web page.",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "permissions": [
+    "app.window.alwaysOnTop",
+    "webview",
+    "app.window.alpha"
+  ],
+
+  "app": {
+    "background": {
+      "persistent": false,
+      "scripts": [ "src/window.js", "src/index.js" ]
+    }
+  }
+}
