@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <style>
+      body {
+        background: rgba(255,255,255,0.0);
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      .wbv-history-button {
+        border: none;  
+        padding: none;
+        margin-right: 5px;
+        background: white;
+      }
+
+      .flex {
+        display: flex;
+        align-items: space-around;
+      }
+
+      .wbv-location-control, .wbv-history-button  {
+        height: 30px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="nav-controls flex">
+      
+      <button class="wbv-history-button" id="history-back-button"><img src="img/icons8-back-24.png"/></button>
+      <button class="wbv-history-button" id="history-forward-button"><img src="img/icons8-forward-24.png"/></button>
+      <button class="wbv-history-button" id="history-refresh-button"><img src="img/icons8-rotate-right-24.png"/></button>
+      <form id="wbv-location-section">
+        <input class="wbv-location-control" name="wbv-location"/>
+        <button class="wbv-location-control" id="wbv-location-go">Go</button>
+      </form>
+
+    </div>
+    <webview name="floating-webview" src="https://www.google.com" style="height: 90%; width: 100%;"></webview>
+  
+  <footer>
+    <small>Icons provided by <a href="https://www.icons8.com">Icons8</a></small>
+  </footer>
+  </body>
+
+  <script src="../src/webview.js"></script>
+  <script src="../src/util.js"></script>
+</html>
